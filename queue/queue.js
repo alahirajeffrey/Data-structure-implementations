@@ -3,11 +3,13 @@ class Queue {
     this.items = [];
   }
 
+  // add element to end of queue
   enqueue(item) {
     this.items.push(item);
     return `${item} added to queue`;
   }
 
+  // remeove first element in queue
   dequeue() {
     if (!this.isEmpty()) {
       const removedItem = this.items.shift();
@@ -17,10 +19,12 @@ class Queue {
     }
   }
 
+  // check if queue is empty
   isEmpty() {
     return this.size() === 0;
   }
 
+  // check the last element in the queue
   peek() {
     if (!this.isEmpty()) {
       return this.items[0];
@@ -29,6 +33,7 @@ class Queue {
     }
   }
 
+  // get size of queue
   size() {
     return this.items.length;
   }
